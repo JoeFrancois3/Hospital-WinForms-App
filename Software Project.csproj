@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Software_Project</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>Software_Project.Form1</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Software Project DB.sqbpro" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SQLite" Version="3.13.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net6.0-windows\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Add_Edit Appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Add_Edit Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AppointmentMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PatientMaintenance.cs" />
+  </ItemGroup>
+
+</Project>
